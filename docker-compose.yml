@@ -1,5 +1,5 @@
 services:
-  vaultwarden_server:
+  vaultwarden:
     image: vaultwarden/server:1.37.4-alpine
     container_name: vaultwarden
     restart: unless-stopped
@@ -13,5 +13,5 @@ services:
         ${VAULTWARDEN_WEB_HOST} {
             header -Server
             encode gzip
-            reverse_proxy upstream:80
+            reverse_proxy vaultwarden:80
         }
