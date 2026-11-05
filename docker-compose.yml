@@ -10,7 +10,7 @@ services:
       SIGNUPS_ALLOWED: "${VAULTWARDEN_ALLOW_REGISTER}"
     labels:
       caddyfile: |
-        {$VAULTWARDEN_WEB_HOST} {
+        ${VAULTWARDEN_WEB_HOST} {
             header -Server
             encode gzip
             reverse_proxy upstream:80
