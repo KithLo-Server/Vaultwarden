@@ -15,7 +15,7 @@ permissions:
 
 jobs:
   deploy:
-    runs-on: [self-hosted, shared]
+    runs-on: self-hosted
     env:
       VAULTWARDEN_WEB_HOST: ${{ vars.VAULTWARDEN_WEB_HOST }}
       VAULTWARDEN_DATA: ${{ vars.VAULTWARDEN_DATA }}
